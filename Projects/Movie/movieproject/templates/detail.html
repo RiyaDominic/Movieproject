@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid mt-5" xmlns="http://www.w3.org/1999/html">
+     <div class="row">
+    <div class="col-md-4 m-2">
+        <img src="{{movie.img.url}}" width="500" height="500">
+    </div>
+    <div class="col-md-4 mx-4 ">
+        <h1><b><u>{{movie.name}}</u></b></h1><br>
+        <h4>{{movie.desc}}</h4><br>
+        <h3><b><i>{{movie.year}}</b></i></h3><br>
+        <a class="btn btn-info " href="{% url 'movieapp:update' movie.id %}">UPDATE</a>
+        <a class="btn btn-danger mx-3" href="{% url 'movieapp:delete' movie.id %}">DELETE</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}
